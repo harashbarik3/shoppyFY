@@ -1,0 +1,17 @@
+<div class="card mb-4 shadow-sm">
+    <img class="bd-placeholder-img card-img-top" width="100%" [src]="productItem.img_url"/>
+    <div class="card-body">
+        <p class="card-text"><strong>{{ productItem.name}}</strong></p>
+        <p class="card-text">M.R.P <del>{{ productItem.price + productItem.discount | currency:'INR' }}</del></p>
+        <p class="card-text"><strong>{{ productItem.price| currency:'INR'}}</strong></p>
+        <p class="card-text" [ngStyle]="{'color':'orange'}"><strong>save {{ productItem.discount| currency:'INR'}}</strong></p>
+      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      --><div class="d-flex justify-content-between align-items-center"> 
+        <div class="btn-group">
+          <button type="button" class="btn btn-lg btn-outline-primary addcrd" (click)="handelAddToCart()">Add to Cart</button>
+          <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View Details</button> -->
+        </div>
+        
+      </div>
+    </div>
+</div>
